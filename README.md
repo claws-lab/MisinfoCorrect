@@ -66,7 +66,7 @@ Before running this code,
 1. In-the-wild social media data containing 754 annotated (misinformation tweet, counter-misinformation reply) pairs. Below is the data statistics:
 
 <center>
-![alt text](./asset/social_media.jpg)
+<img src="./asset/social_media.jpg">
 </center>
 
 2. Crowdsourcing data containing 591 (misinformation tweet, human-written counter-misinformation reply) pairs. Note that for these 591 human-written replies, they are refuting misinformation, polite, and providing evidence per the requirement in the paper.

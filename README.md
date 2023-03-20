@@ -64,7 +64,9 @@ Before running this code,
 ## Dataset
 
 1. In-the-wild social media data containing 754 annotated (misinformation tweet, counter-misinformation reply) pairs. Below is the data statistics:
+
 ![alt text](./asset/social_media.jpg)
+
 2. Crowdsourcing data containing 591 (misinformation tweet, human-written counter-misinformation reply) pairs. Note that for these 591 human-written replies, they are refuting misinformation, polite, and providing evidence per the requirement in the paper.
 3. Our dataset can be found [here](https://www.dropbox.com/sh/5u2mdo53tgh3vrh/AADfYHqhQbt0A2gUciT583E0a?dl=0).
 4. We notice the change of Twitter API. If you do not have access to the Twitter data, we can share it with you properly. Please contact Bing He (bhe46@gatech.edu)

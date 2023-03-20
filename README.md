@@ -1,5 +1,5 @@
 # Reinforcement Learning-based Counter-Misinformation Response Generation: A Case Study of COVID-19 Vaccine Misinformation
-This repository contains code for our ACM WWW 2023 publication on counter-misinformation response generation. 
+This repository contains code and data for our ACM WWW 2023 publication on counter-misinformation response generation. 
 
 If our code or data helps you in your research, please cite:
 
@@ -53,15 +53,20 @@ python src/train_model.py \
 	--log_dir output/ \
 	--train_batch_size 4 \
 	--num_optim_steps 100
-
 ```
 Before running this code, 
 1. You will need a DialoGPT-like transformer model for initialization (`model_name_or_path`, ideally finetuned on your dataset, check the warm-up start in the paper);
 2. You will need to separately train multiple reward functions for the reinforcement learning framework. Here, we have three reward functions: politeness, refutation, and evidence reward classifiers. The locations of classifiers are specified in politeness_clf_fp, refutation_clf_fp, evidence_clf_fp in variables_ext.py.
 3. To configure the reward parameters, please refer to variables_ext.py
-4. For sanity check when releasing the code, we only use one GPU in the current version. Please revise n_gpu in variables_ext.py when there are multiple GPUs. For the paper, we run our experiments on NVIDIA DGX-1 consisting of 8 V100 GPUs.
+4. For sanity check when releasing the codebase, we only use one GPU in the current version. Please revise n_gpu in variables_ext.py when there are multiple GPUs. For the paper, we run our experiments on NVIDIA DGX-1 consisting of 8 V100 GPUs.
+5. The repository is based on [DialoGPT](https://github.com/microsoft/DialoGPT) and [Partner](https://github.com/behavioral-data/PARTNER) and uses a similar code structure and environment.
 
+## Dataset
 
-## Additional Notes
-1. The repository is based on [DialoGPT](https://github.com/microsoft/DialoGPT) and [Partner](https://github.com/behavioral-data/PARTNER) and uses a similar code structure and environment.
-2. Our dataset can be found [here](https://sites.google.com/view/www23-misinfocorrect)
+1. In-the-wild social media data containing 754 annotated (misinformation tweet, counter-misinformation reply) pairs. Below is the data statistics:
+![alt text](./asset/social_media.jpg)
+2. Crowdsourcing data containing 591 (misinformation tweet, human-written counter-misinformation reply) pairs. Note that for these 591 human-written replies, they are refuting misinformation, polite, and providing evidence per the requirement in the paper.
+3. Our dataset can be found [here](https://www.dropbox.com/sh/5u2mdo53tgh3vrh/AADfYHqhQbt0A2gUciT583E0a?dl=0).
+4. We notice the change of Twitter API. If you do not have access to the Twitter data, we can share it with you properly. Please contact Bing He (bhe46@gatech.edu)
+
+If you have any questions, please contact the author Bing He (bhe46@gatech.edu)

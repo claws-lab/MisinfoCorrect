@@ -1,6 +1,8 @@
 # Reinforcement Learning-based Counter-Misinformation Response Generation: A Case Study of COVID-19 Vaccine Misinformation
 This repository contains code and data for our ACM WWW 2023 publication on counter-misinformation response generation. 
 
+You may access the PDF here: [PDF](https://faculty.cc.gatech.edu/~srijan/pubs/he-www23-misinfocorrect.pdf)
+
 If our code or data helps you in your research, please cite:
 
 ```
